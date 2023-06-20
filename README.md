@@ -1,7 +1,9 @@
 # ORB_SLAM2-nanodet
 **Authors:** shoushou0315
 
-基于ORB-SLAM2与nanodet实现物体识别及动态物体剔除，针对树莓派等低性能设备开发。  
+通过ncnn部署nanodet实现ORB-SLAM2物体识别及动态物体剔除，针对树莓派等低性能设备开发。  
+添加:Detecting类  
+修改:Frame、FrameDrawer类
 
 ### Related Publications:
 ORB_SLAM2:https://github.com/raulmur/ORB_SLAM2  
@@ -26,7 +28,14 @@ We use modified versions of the [DBoW2](https://github.com/dorian3d/DBoW2) libra
 ## ROS (optional)
 We provide some examples to process the live input of a monocular, stereo or RGB-D camera using [ROS](ros.org). Building these examples is optional. In case you want to use ROS, a version Hydro or newer is needed.
 
-# 3. Building ORB_SLAM2-nanodet library and examples
+# yaml添加参数
+添加
+```
+powersave:0
+thread:4
+target_size:256  
+```
+# Building ORB_SLAM2-nanodet library and examples
 
 Clone the repository:
 ```
